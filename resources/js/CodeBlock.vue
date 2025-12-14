@@ -19,7 +19,7 @@
 import { ref, computed } from 'vue';
 
 export default {
-  name: 'LdCodeBlock',
+  name: 'SbCodeBlock',
   props: {
     code: { type: String, required: true },
     language: { type: String, default: 'plaintext' },

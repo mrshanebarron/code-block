@@ -23,6 +23,6 @@ class CodeBlock extends Component
 
     public function render()
     {
-        return view('ld-code-block::livewire.code-block');
+        return view('sb-code-block::livewire.code-block');
     }
 }
