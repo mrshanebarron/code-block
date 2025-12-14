@@ -7,26 +7,18 @@ use Livewire\Component;
 class CodeBlock extends Component
 {
     public string $code = '';
-    public string $language = 'php';
+    public string $language = 'plaintext';
     public bool $showLineNumbers = true;
-    public bool $showCopy = true;
+    public bool $showCopyButton = true;
     public ?string $filename = null;
-    public ?int $highlightLines = null;
 
-    public function mount(
-        string $code = '',
-        string $language = 'php',
-        bool $showLineNumbers = true,
-        bool $showCopy = true,
-        ?string $filename = null,
-        ?int $highlightLines = null
-    ): void {
+    public function mount(string $code = '', string $language = 'plaintext', bool $showLineNumbers = true, bool $showCopyButton = true, ?string $filename = null): void
+    {
         $this->code = $code;
         $this->language = $language;
         $this->showLineNumbers = $showLineNumbers;
-        $this->showCopy = $showCopy;
+        $this->showCopyButton = $showCopyButton;
         $this->filename = $filename;
-        $this->highlightLines = $highlightLines;
     }
 
     public function render()
